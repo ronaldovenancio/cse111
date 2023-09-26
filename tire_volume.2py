@@ -2,20 +2,14 @@
 ____________________________________________________________________
 Author: Ronaldo Venancio
 Assignments in CSE 111
-Purpose: L02 Prove: Milestone.
+Purpose: L01 Prove: Milestone.
 
 This program contains the function math.pi and the function round().
 Also, I used the while loop.
-
-This program  prints the tire volume to the terminal window and it asks the user if she wants to buy tires with the dimensions that she entered. If the user answers “yes”, it program asks for her/his phone number and store her/his phone number in the volumes.txt file.
 ____________________________________________________________________
 """
 #Import math module so I can use math.pi
 import math
-from datetime import datetime
-
-today = datetime.now()
-print(today)
 
 entrance = "continue"
 while entrance != "quite":
@@ -35,22 +29,8 @@ while entrance != "quite":
      print()
      print(f"The approximate volume is {volume_tire} liters.")
      print()
-
-     print("Do you want to buy tires with these dimensions? ")
-     answer = input("Write YES if you wish to buy them or NOT: ")
-     answer = answer.lower()
-
-     if answer == "yes":
-          phone = input("What is your phone number? ")
-          with open("volumes.txt", "at") as volumes_file:
-              print(file=volumes_file)
-              print(f" {today}, {width_tire}, {aspect_tire}, {volume_tire}, {phone}",file=volumes_file)
-     if answer != "yes":   
-         with open("volumes.txt", "at") as volumes_file:
-             print(file=volumes_file)
-             print(f" {today}, {width_tire}, {aspect_tire}, {volume_tire}",file=volumes_file)
-
-     entrance = input("Write QUITE if you want to exit: ")
+     
+     entrance = input("Write QUITE if you wish to exit: ")
      entrance = entrance.lower()
 
 
